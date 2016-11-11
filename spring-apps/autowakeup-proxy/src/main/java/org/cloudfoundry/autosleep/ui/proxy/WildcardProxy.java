@@ -127,7 +127,7 @@ public class WildcardProxy {
         ProxyMapEntry mapEntry = proxyMap.findOne(targetHost);
 
         if (mapEntry == null) {
-            return new ResponseEntity<>("Sorry, but this page doesn't exist! ", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("404 Not Found: Requested route does not exist. ", HttpStatus.NOT_FOUND);
         }
 
         String appId = mapEntry.getAppId();
